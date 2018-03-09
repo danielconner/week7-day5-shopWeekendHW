@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuldDannysHarmonicaHaberdashery.iml" filepath="$PROJECT_DIR$/.idea/modules/AuldDannysHarmonicaHaberdashery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuldDannysHarmonicaHaberdashery_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AuldDannysHarmonicaHaberdashery_main.iml" group="AuldDannysHarmonicaHaberdashery" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuldDannysHarmonicaHaberdashery_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AuldDannysHarmonicaHaberdashery_test.iml" group="AuldDannysHarmonicaHaberdashery" />
+    </modules>
+  </component>
+</project>
