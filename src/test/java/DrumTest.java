@@ -57,4 +57,9 @@ public class DrumTest {
     public void canGetNumberOfDrums() {
         assertEquals(7, drums.getNumberOfDrums());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Drums are being played", drums.play());
+    }
 }

@@ -1,4 +1,4 @@
-public class Piano extends PlayableInstruments{
+public class Piano extends PlayableInstruments implements Playable{
 
     private int numberOfKeys;
 
@@ -9,5 +9,10 @@ public class Piano extends PlayableInstruments{
 
     public int getNumberOfKeys() {
         return numberOfKeys;
+    }
+
+    @Override
+    public String play() {
+        return getInstrumentType() + " is being played";
     }
 }

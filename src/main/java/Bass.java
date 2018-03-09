@@ -1,4 +1,4 @@
-public class Bass extends PlayableInstruments{
+public class Bass extends PlayableInstruments implements Playable{
 
     private int numberOfStrings;
 
@@ -9,5 +9,10 @@ public class Bass extends PlayableInstruments{
 
     public int getNumberOfStrings() {
         return numberOfStrings;
+    }
+
+    @Override
+    public String play() {
+        return getInstrumentType() + " is being played";
     }
 }

@@ -57,4 +57,9 @@ public class HarmonicaTest {
     public void canHarmonicaCatagory() {
         assertEquals("Detonic", harmonica.getHarmonicaCatagory());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Harmonica is being played", harmonica.play());
+    }
 }

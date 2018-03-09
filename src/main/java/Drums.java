@@ -1,4 +1,4 @@
-public class Drums extends PlayableInstruments{
+public class Drums extends PlayableInstruments implements Playable{
 
     private int numberOfDrums;
 
@@ -9,5 +9,10 @@ public class Drums extends PlayableInstruments{
 
     public int getNumberOfDrums() {
         return numberOfDrums;
+    }
+
+    @Override
+    public String play() {
+        return getInstrumentType() + " are being played";
     }
 }

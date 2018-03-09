@@ -56,4 +56,9 @@ public class BassTest {
     public void canGetNumberOfStrings() {
         assertEquals(4, bass.getNumberOfStrings());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Bass is being played", bass.play());
+    }
 }

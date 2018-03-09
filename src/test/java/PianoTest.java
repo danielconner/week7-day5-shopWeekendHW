@@ -57,4 +57,9 @@ public class PianoTest {
     public void canGetNumberOfKeys() {
         assertEquals(128, piano.getNumberOfKeys());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Piano is being played", piano.play());
+    }
 }

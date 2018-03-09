@@ -1,4 +1,4 @@
-public class Harmonica extends PlayableInstruments{
+public class Harmonica extends PlayableInstruments implements Playable{
 
     private String harmonicaCatagory;
 
@@ -9,5 +9,10 @@ public class Harmonica extends PlayableInstruments{
 
     public String getHarmonicaCatagory() {
         return harmonicaCatagory;
+    }
+
+    @Override
+    public String play() {
+        return getInstrumentType() + " is being played";
     }
 }

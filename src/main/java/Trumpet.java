@@ -1,4 +1,4 @@
-public class Trumpet extends PlayableInstruments {
+public class Trumpet extends PlayableInstruments implements Playable{
 
     private int numberOfValues;
 
@@ -9,5 +9,10 @@ public class Trumpet extends PlayableInstruments {
 
     public int getNumberOfValues() {
         return numberOfValues;
+    }
+
+    @Override
+    public String play() {
+        return getInstrumentType() + " is being played";
     }
 }
