@@ -30,7 +30,7 @@ public class TrumpetTest {
 
     @Test
     public void canGetColour() {
-        assertEquals("Golddust", trumpet.getColour());
+        assertEquals("Goldust", trumpet.getColour());
     }
 
     @Test
