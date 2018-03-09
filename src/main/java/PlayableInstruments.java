@@ -1,14 +1,18 @@
 public abstract class PlayableInstruments {
 
-        private String material;
-        private String colour;
-        private InstrumentFamilyType familyType;
-        private double buyPrice;
-        private double sellPrice;
-        private int quantity;
+    private String instrumentType;
+    private String make;
+    private String model;
+    private String colour;
+    private InstrumentFamilyType familyType;
+    private double buyPrice;
+    private double sellPrice;
+    private int quantity;
 
-    public PlayableInstruments(String material, String colour, InstrumentFamilyType familyType, double buyPrice, double sellPrice, int quantity) {
-        this.material = material;
+    public PlayableInstruments(String instrumentType, String make, String model, String colour, InstrumentFamilyType familyType, double buyPrice, double sellPrice, int quantity) {
+        this.instrumentType = instrumentType;
+        this.make = make;
+        this.model = model;
         this.colour = colour;
         this.familyType = familyType;
         this.buyPrice = buyPrice;
@@ -16,16 +20,24 @@ public abstract class PlayableInstruments {
         this.quantity = quantity;
     }
 
-    public String getMaterial() {
-        return material;
+    public String getInstrumentType() {
+        return instrumentType;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
     }
 
     public String getColour() {
         return colour;
     }
 
-    public InstrumentFamilyType getFamilyType() {
-        return familyType;
+    public String getFamilyType() {
+        return this.familyType.getFamilyType();
     }
 
     public double getBuyPrice() {
