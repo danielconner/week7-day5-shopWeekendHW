@@ -19,4 +19,16 @@ public class Shop {
     public double getTotalSales() {
         return totalSales;
     }
+
+    public int stockSize(){
+        return this.stock.size();
+    }
+
+    public void addStock(Sellable item){
+        this.stock.add(item);
+    }
+
+    public void removeStock(Sellable item){
+        this.stock.remove(item);
+    }
 }

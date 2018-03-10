@@ -37,4 +37,23 @@ public class ShopTest {
     public void canGetTotalSales() {
         assertEquals(0.00, shop.getTotalSales(), 0.01);
     }
+
+    @Test
+    public void canCheckCurrentStockLevels(){
+        assertEquals(4, shop.stockSize());
+    }
+
+    @Test
+    public void canAddItemToStock(){
+        StringPacks stringPacks = new StringPacks("Guitar Strings", 2.50, 7.50, 25, "Coopers");
+        shop.addStock(stringPacks);
+        assertEquals(5, shop.stockSize());
+    }
+
+    @Test
+    public void canRemoveItemFromStock(){
+        assertEquals(4, shop.stockSize());
+        shop.removeStock(guitar);
+        assertEquals(3, shop.stockSize());
+    }
 }
