@@ -1,4 +1,4 @@
-public class Mouthpeice extends NonPlayableStock {
+public class Mouthpeice extends NonPlayableStock implements Sellable {
 
     private String colour;
 
@@ -9,5 +9,10 @@ public class Mouthpeice extends NonPlayableStock {
 
     public String getColour() {
         return colour;
+    }
+
+    @Override
+    public double calculateMarkup() {
+        return (getSellPrice() - getBuyPrice());
     }
 }

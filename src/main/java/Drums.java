@@ -1,4 +1,4 @@
-public class Drums extends PlayableInstruments implements Playable{
+public class Drums extends PlayableInstruments implements Playable, Sellable{
 
     private int numberOfDrums;
 
@@ -14,5 +14,10 @@ public class Drums extends PlayableInstruments implements Playable{
     @Override
     public String play() {
         return getInstrumentType() + " are being played";
+    }
+
+    @Override
+    public double calculateMarkup() {
+        return (getSellPrice() - getBuyPrice());
     }
 }

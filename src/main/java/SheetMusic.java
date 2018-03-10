@@ -1,4 +1,4 @@
-public class SheetMusic extends NonPlayableStock {
+public class SheetMusic extends NonPlayableStock implements Sellable {
 
     private String publisher;
 
@@ -9,5 +9,10 @@ public class SheetMusic extends NonPlayableStock {
 
     public String getPublisher() {
         return publisher;
+    }
+
+    @Override
+    public double calculateMarkup() {
+        return (getSellPrice() - getBuyPrice());
     }
 }

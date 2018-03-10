@@ -37,4 +37,9 @@ public class DrumStickTest {
     public void canGetMaterial() {
         assertEquals("Wood", drumStick.getMaterial());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(11.49, drumStick.calculateMarkup(), 0.01);
+    }
 }

@@ -61,4 +61,9 @@ public class BassTest {
     public void canPlay() {
         assertEquals("Bass is being played", bass.play());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(634.98, bass.calculateMarkup(), 0.01);
+    }
 }

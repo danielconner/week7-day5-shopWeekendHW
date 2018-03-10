@@ -37,4 +37,9 @@ public class MouthpieceTest {
     public void canGetColour() {
         assertEquals("Silver", mouthpiece.getColour());
     }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(33, mouthpiece.calculateMarkup(), 0.01);
+    }
 }

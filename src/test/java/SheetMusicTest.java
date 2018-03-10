@@ -37,4 +37,9 @@ public class SheetMusicTest {
     public void canGetPublisher() {
         assertEquals("Penguin", sheetMusic.getPublisher());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(6.49, sheetMusic.calculateMarkup(),0.01);
+    }
 }

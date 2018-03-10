@@ -36,4 +36,9 @@ public class StringPackTest {
     public void canGetBrand() {
         assertEquals("Coopers", stringPacks.getBrand());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(5, stringPacks.calculateMarkup(), 0.01);
+    }
 }

@@ -1,4 +1,4 @@
-public class StringPacks extends NonPlayableStock {
+public class StringPacks extends NonPlayableStock implements Sellable {
 
     private String brand;
 
@@ -9,5 +9,10 @@ public class StringPacks extends NonPlayableStock {
 
     public String getBrand() {
         return brand;
+    }
+
+    @Override
+    public double calculateMarkup() {
+        return (getSellPrice() - getBuyPrice());
     }
 }

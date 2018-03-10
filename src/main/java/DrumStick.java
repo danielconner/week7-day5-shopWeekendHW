@@ -1,4 +1,4 @@
-public class DrumStick extends NonPlayableStock {
+public class DrumStick extends NonPlayableStock implements Sellable {
 
     private String material;
 
@@ -10,4 +10,11 @@ public class DrumStick extends NonPlayableStock {
     public String getMaterial() {
         return material;
     }
+
+    @Override
+    public double calculateMarkup() {
+        return (getSellPrice() - getBuyPrice());
+    }
+
+
 }

@@ -62,4 +62,9 @@ public class HarmonicaTest {
     public void canPlay() {
         assertEquals("Harmonica is being played", harmonica.play());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(19, harmonica.calculateMarkup(), 0.01);
+    }
 }

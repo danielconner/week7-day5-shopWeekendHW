@@ -1,4 +1,4 @@
-public class Guitar extends PlayableInstruments implements Playable{
+public class Guitar extends PlayableInstruments implements Playable, Sellable{
 
     private int numberOfStrings;
 
@@ -14,5 +14,10 @@ public class Guitar extends PlayableInstruments implements Playable{
     @Override
     public String play() {
         return getInstrumentType() + " is being played";
+    }
+
+    @Override
+    public double calculateMarkup() {
+        return (getSellPrice() - getBuyPrice());
     }
 }
