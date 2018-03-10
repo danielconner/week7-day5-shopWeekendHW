@@ -56,4 +56,18 @@ public class ShopTest {
         shop.removeStock(guitar);
         assertEquals(3, shop.stockSize());
     }
+
+    @Test
+    public void  totalProfitStockValue(){
+        guitar = new Guitar("Guitar", "Epiphone", "Les Paul", "Sunburst", InstrumentFamilyType.PLUCKED_STRING, 89.99, 259.99, 10, 6);
+        trumpet = new Trumpet("Trumpet", "Elkhart", "100Tr", "Goldust", InstrumentFamilyType.WIND, 79.99, 137.78, 8, 5);
+        harmonica = new Harmonica("Harmonica", "Suzuki", "Hammond", "Steel Grey", InstrumentFamilyType.WIND, 9.00, 28.00, 5, "Detonic");
+        mouthpeice = new Mouthpeice("Rico Trumpet Mouthpiece", 25.99, 58.99, 5, "Silver");
+        ArrayList<Sellable> stock = new ArrayList<>();
+        stock.add(guitar);
+        stock.add(trumpet);
+        stock.add(harmonica);
+        stock.add(mouthpeice);
+        assertEquals(279.79, shop.totalProfitStockValue(stock), 0.01);
+    }
 }

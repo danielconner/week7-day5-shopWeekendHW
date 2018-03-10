@@ -31,4 +31,12 @@ public class Shop {
     public void removeStock(Sellable item){
         this.stock.remove(item);
     }
+
+    public double totalProfitStockValue(ArrayList<Sellable> stock){
+        double totalMarkup = 0;
+        for (Sellable items : stock ){
+           totalMarkup += (items.calculateMarkup());
+        }
+        return totalMarkup;
+    }
 }
