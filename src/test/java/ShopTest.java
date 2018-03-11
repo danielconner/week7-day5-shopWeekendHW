@@ -74,6 +74,15 @@ public class ShopTest {
     @Test
     public void canAddToTotalSales(){
         guitar = new Guitar("Guitar", "Epiphone", "Les Paul", "Sunburst", InstrumentFamilyType.PLUCKED_STRING, 89.99, 259.99, 10, 6);
-        assertEquals(259.99, shop.addToTotalSales(guitar.getSellPrice()), 0.01);
+        shop.addToTotalSales(guitar.getSellPrice());
+        assertEquals(259.99, shop.getTotalSales(), 0.01);
+    }
+
+    @Test
+    public void NormalSaleTest(){
+        StringPacks stringPacks = new StringPacks("Guitar Strings", 2.50, 7.50, 25, "Coopers");
+        shop.addStock(stringPacks);
+        double totalSales = shop.addToTotalSales(stringPacks.getSellPrice());
+        assertEquals(7.5, totalSales, 0.01);
     }
 }
