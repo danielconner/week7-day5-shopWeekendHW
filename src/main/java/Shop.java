@@ -39,4 +39,9 @@ public class Shop {
         }
         return totalMarkup;
     }
+
+    public double addToTotalSales(double saleprice){
+        return this.totalSales + saleprice;
+    }
+
 }

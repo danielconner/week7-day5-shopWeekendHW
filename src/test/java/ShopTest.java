@@ -70,4 +70,10 @@ public class ShopTest {
         stock.add(mouthpeice);
         assertEquals(279.79, shop.totalProfitStockValue(stock), 0.01);
     }
+
+    @Test
+    public void canAddToTotalSales(){
+        guitar = new Guitar("Guitar", "Epiphone", "Les Paul", "Sunburst", InstrumentFamilyType.PLUCKED_STRING, 89.99, 259.99, 10, 6);
+        assertEquals(259.99, shop.addToTotalSales(guitar.getSellPrice()), 0.01);
+    }
 }
